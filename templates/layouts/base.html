@@ -5,12 +5,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... code reuse
 -->
 <!DOCTYPE HTML>
-<html lang="en">
-
-{% set basename = "Nighthawk Coding" %}
-{% set github = "https://github.com/nighthawkcoders" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
 
 <head>
     <!-- Required meta tags -->
@@ -43,7 +37,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 </head>
 
-<body style = "background-color:green" background = "python.jpeg">
+<body style = "background-color:blue" background = "python.jpeg">
     {% include "layouts/navbar.html" %}
     {% block body %}
     {% endblock %}

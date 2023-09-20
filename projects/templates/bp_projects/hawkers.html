@@ -1,0 +1,44 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/project.html" %}
+
+<!-- Setting the title to "Collaboration" -->
+{% block title %}Collaboration{% endblock %}
+
+<!-- Setting up three dropdown menus with cool text -->
+{% block content %}
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            What are the Benefits of a Team?
+        </button>
+        <ul class="dropdown-menu">
+            <!-- Add your dropdown items here -->
+            <li><a href="#">Benefit 1</a></li>
+            <li><a href="#">Benefit 2</a></li>
+            <li><a href="#">Benefit 3</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Communication
+        </button>
+        <ul class="dropdown-menu">
+            <!-- Add your dropdown items here -->
+            <li><a href="#">Communication Tool 1</a></li>
+            <li><a href="#">Communication Tool 2</a></li>
+            <li><a href="#">Communication Tool 3</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Work Assigned
+        </button>
+        <ul class="dropdown-menu">
+            <!-- Add your dropdown items here -->
+            <li><a href="#">Task 1</a></li>
+            <li><a href="#">Task 2</a></li>
+            <li><a href="#">Task 3</a></li>
+        </ul>
+    </div>
+{% endblock %}
