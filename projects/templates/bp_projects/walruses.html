@@ -1,24 +1,105 @@
-
-<!-- Setting up variables to customize "project" details to be specific to walruses -->
-{% set project = "Collaboration" %}
-{% set overview = "Benefits of a Team" %}
-{% set scrumboard = "Communication" %}
-{% set repo = "Work Assigned" %}
-
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
-    <script src="{{ url_for('static', filename='js/three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/vanta.rings.min.js') }}"></script>
-    <script>
-        VANTA.RINGS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
+{% extends "layouts/base.html" %}
+{% block style %}
+:root {
+    --white: whitesmoke;
+    --black: black;
+    --grey: grey;
+    --hover-color: #1DA1F2; /* Define the hover color */
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    animation: fadein 2s;
+    background-color: var(--grey);
+    color: var(--white);
+}
+.dark-mode {
+    background-color: var(--white);
+    color: var(--black);
+}
+h1 {
+    font-size: 5em;
+}
+a {
+    color: midnightblue;
+}
+.fa {
+    font-size: 3em;
+    letter-spacing: 1em;
+    transition: all .2s;
+    color: white;
+}
+.fa:hover {
+    transform: translateY(10px);
+}
+.fa-youtube-play:hover {
+    color: #CC0000;
+}
+.fa-twitter:hover {
+    color: #1DA1F2;
+}
+.fa-github:hover {
+    color: #000000;
+}
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+    color: white;
+    font-size: 2.5em;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    background-color: var(--hover-color); /* Change hover color to light blue */
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+}
+.row {
+    margin: auto;
+}
+.teamwork-quote {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: var(--white);
+    font-style: italic; /* Italicize the text */
+    padding: 10px; /* Add padding for border */
+    border: 1px solid var(--white); /* Add a border */
+    border-radius: 5px; /* Round the border corners */
+}
+</style>
+</head>
+{% endblock %}
+{% block body %}
+<div class="container-fluid">
+    </div>
+    <div class="product" style="margin-top: 2%;">
+        <div class="row" style="padding: 10%; padding-top: 5%; padding-bottom: 5%;">
+            <div class="col-12">
+                <h1>{{ project }} Programming Function and Purpose</h1>
+            </div>
+        </div>
+        <div class="row" style="padding-left: 5%;">
+            <div class="col-12">
+                <!-- Teamwork quote -->
+                <p class="teamwork-quote">"Talk is Cheap. Show me the Code. - Linus Torvalds</p>
+            </div>
+        </div>
+        <div class="row" style="padding-left: 32%;">
+            
+            <div class="col-4">
+                <a href="https://docs.google.com/drawings/d/19coOQCinE-q82J774f7MvdHVCUwljlRNkQ2FMDeveqo/edit?usp=sharing" class="btn btn-block" style="margin-top: 20px;">Onwards to VSCode!</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
 {% endblock %}
